@@ -1,0 +1,159 @@
+[gd_scene load_steps=16 format=2]
+
+[ext_resource path="res://Scenes/car.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Fonts/ARLRDBD.TTF" type="DynamicFontData" id=2]
+[ext_resource path="res://Scenes/Finishbutton.gd" type="Script" id=3]
+[ext_resource path="res://Scenes/Door.glb" type="PackedScene" id=4]
+[ext_resource path="res://Assets/house.glb" type="PackedScene" id=5]
+
+[sub_resource type="BoxShape" id=1]
+
+[sub_resource type="CubeMesh" id=2]
+size = Vector3( 4300, 0.5, 100 )
+
+[sub_resource type="SpatialMaterial" id=3]
+albedo_color = Color( 0.341176, 0.333333, 0.333333, 1 )
+
+[sub_resource type="BoxShape" id=4]
+
+[sub_resource type="CubeMesh" id=5]
+size = Vector3( 4000, 1, 3000 )
+
+[sub_resource type="SpatialMaterial" id=6]
+albedo_color = Color( 0.192157, 0.901961, 0.0901961, 1 )
+
+[sub_resource type="Animation" id=7]
+resource_name = "Carendanimation"
+length = 3.0
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:translation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 1, 2, 3 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector3( -4284.75, 8.73664, 98.9492 ), Vector3( -3738.18, 8.73664, 98.9492 ), Vector3( -3228.76, 8.73664, 98.9492 ), Vector3( -2703.7, 8.73664, 98.9492 ) ]
+}
+
+[sub_resource type="DynamicFont" id=8]
+size = 30
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=9]
+size = 30
+font_data = ExtResource( 2 )
+
+[sub_resource type="BoxShape" id=10]
+
+[node name="Spatial" type="Spatial"]
+
+[node name="Road" type="RigidBody" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -470.724, 0, 106.992 )
+mass = 0.00102041
+gravity_scale = 0.0
+
+[node name="CollisionShape" type="CollisionShape" parent="Road"]
+shape = SubResource( 1 )
+
+[node name="MeshInstance" type="MeshInstance" parent="Road"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1776.02, 4.66297, 0 )
+mesh = SubResource( 2 )
+material/0 = SubResource( 3 )
+
+[node name="KinematicBody" type="KinematicBody" parent="."]
+
+[node name="CollisionShape" type="CollisionShape" parent="KinematicBody"]
+shape = SubResource( 4 )
+
+[node name="MeshInstance" type="MeshInstance" parent="KinematicBody"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -2423.27, -2.13095, 60.5906 )
+mesh = SubResource( 5 )
+material/0 = SubResource( 6 )
+
+[node name="car" parent="." instance=ExtResource( 1 )]
+transform = Transform( 2.13812, 0.182299, 39.9424, 0.0217319, 39.9996, -0.183723, -39.9428, 0.0315213, 2.13798, -2703.7, 8.73664, 98.9492 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="car"]
+autoplay = "Carendanimation"
+anims/Carendanimation = SubResource( 7 )
+
+[node name="Camera" type="Camera" parent="car"]
+transform = Transform( -0.000485978, -0.00847855, 0.0235134, -0.000805641, 0.0235109, 0.008461, -0.0249823, -0.000593255, -0.000730268, 6.44228, 1.89877, 1.09818 )
+current = true
+near = 0.01
+far = 8192.0
+
+[node name="Control" type="Control" parent="."]
+margin_right = 895.0
+margin_bottom = 437.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button" type="Button" parent="Control"]
+margin_left = 721.0
+margin_top = 370.0
+margin_right = 877.0
+margin_bottom = 433.0
+custom_fonts/font = SubResource( 8 )
+custom_colors/font_color = Color( 0.164706, 0.839216, 0.415686, 1 )
+text = "Finish!"
+script = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="Control"]
+margin_right = 882.0
+margin_bottom = 93.0
+custom_fonts/font = SubResource( 9 )
+text = "You did it House Found!!"
+align = 1
+valign = 1
+
+[node name="Escaper House" type="KinematicBody" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -2685.56, 731.481, 0 )
+
+[node name="CollisionShape" type="CollisionShape" parent="Escaper House"]
+shape = SubResource( 10 )
+
+[node name="Sprite3D" type="Sprite3D" parent="Escaper House"]
+
+[node name="house" parent="Escaper House" instance=ExtResource( 5 )]
+transform = Transform( 130, 0, 0, 0, 130, 0, 0, 0, 130, 0, -678.244, 470.083 )
+
+[node name="Door6" parent="Escaper House" instance=ExtResource( 4 )]
+transform = Transform( 140, 0, 0, 0, 130, 0, 0, 0, 130, -0.0300293, -680.454, 310.144 )
+
+[node name="Escaper House2" type="KinematicBody" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -3126.38, 731.481, 0 )
+
+[node name="CollisionShape" type="CollisionShape" parent="Escaper House2"]
+shape = SubResource( 10 )
+
+[node name="Sprite3D" type="Sprite3D" parent="Escaper House2"]
+
+[node name="house" parent="Escaper House2" instance=ExtResource( 5 )]
+transform = Transform( 130, 0, 0, 0, 130, 0, 0, 0, 130, 0, -678.244, 470.083 )
+
+[node name="Door6" parent="Escaper House2" instance=ExtResource( 4 )]
+transform = Transform( 140, 0, 0, 0, 130, 0, 0, 0, 130, -0.0300293, -680.454, 310.144 )
+
+[node name="Escaper House3" type="KinematicBody" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -2266.99, 784.39, -31.3126 )
+
+[node name="CollisionShape" type="CollisionShape" parent="Escaper House3"]
+shape = SubResource( 10 )
+
+[node name="Sprite3D" type="Sprite3D" parent="Escaper House3"]
+
+[node name="house" parent="Escaper House3" instance=ExtResource( 5 )]
+transform = Transform( 130, 0, 0, 0, 130, 0, 0, 0, 130, 0, -732.288, 470.083 )
+
+[node name="Door6" parent="Escaper House3" instance=ExtResource( 4 )]
+transform = Transform( 140, 0, 0, 0, 130, 0, 0, 0, 130, -0.0300293, -738.877, 310.144 )
+
+[connection signal="pressed" from="Control/Button" to="Control/Button" method="_on_Button_pressed"]

@@ -1,0 +1,98 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://Fonts/ARLRDBD.TTF" type="DynamicFontData" id=1]
+[ext_resource path="res://Fonts/Dodgy Ultra.ttf" type="DynamicFontData" id=2]
+[ext_resource path="res://Scenes/correctanswer4thscreenreal.gd" type="Script" id=3]
+[ext_resource path="res://Scenes/Wrong.gd" type="Script" id=4]
+
+[sub_resource type="DynamicFont" id=1]
+size = 200
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 34
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=3]
+size = 30
+font_data = ExtResource( 2 )
+
+[node name="Control" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+rect_pivot_offset = Vector2( -790.379, -91.545 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+anchor_right = 1.0
+margin_left = 172.629
+margin_top = -36.8881
+margin_right = 172.629
+margin_bottom = 431.112
+custom_fonts/normal_font = SubResource( 1 )
+text = "                   12x3=?"
+fit_content_height = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button" type="Button" parent="."]
+anchor_top = 1.0
+anchor_bottom = 1.0
+margin_left = 95.1365
+margin_top = -162.151
+margin_right = 295.137
+margin_bottom = -12.1516
+custom_fonts/font = SubResource( 2 )
+text = "36"
+script = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button3" type="Button" parent="."]
+anchor_top = 1.0
+anchor_bottom = 1.0
+margin_left = 397.105
+margin_top = -159.254
+margin_right = 597.105
+margin_bottom = -9.25415
+custom_fonts/font = SubResource( 2 )
+text = "48"
+script = ExtResource( 4 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button2" type="Button" parent="."]
+anchor_top = 1.0
+anchor_bottom = 1.0
+margin_left = 718.836
+margin_top = -167.73
+margin_right = 918.836
+margin_bottom = -17.73
+custom_fonts/font = SubResource( 2 )
+text = "46"
+script = ExtResource( 4 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="."]
+margin_left = 55.0444
+margin_top = 145.62
+margin_right = 949.045
+margin_bottom = 215.62
+custom_fonts/font = SubResource( 3 )
+text = "Solve This to find out the Co-Ordinates!"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[connection signal="pressed" from="Button" to="Button" method="_on_Button_pressed"]
+[connection signal="pressed" from="Button3" to="Button3" method="_on_Button3_pressed"]
+[connection signal="pressed" from="Button2" to="Button2" method="_on_Button2_pressed"]

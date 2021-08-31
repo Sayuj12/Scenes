@@ -1,0 +1,97 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://Fonts/ARLRDBD.TTF" type="DynamicFontData" id=1]
+[ext_resource path="res://Scripts/5thscreenanswerreal.gd" type="Script" id=2]
+[ext_resource path="res://Fonts/Dodgy Ultra.ttf" type="DynamicFontData" id=3]
+[ext_resource path="res://Scenes/Wrong.gd" type="Script" id=4]
+
+[sub_resource type="DynamicFont" id=1]
+size = 200
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 34
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=3]
+size = 30
+font_data = ExtResource( 3 )
+
+[node name="Control" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+anchor_right = 1.0
+margin_left = 141.267
+margin_top = -54.4885
+margin_right = 141.267
+margin_bottom = 413.511
+custom_fonts/normal_font = SubResource( 1 )
+text = "                   482/2=?"
+fit_content_height = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button" type="Button" parent="."]
+anchor_top = 1.0
+anchor_bottom = 1.0
+margin_left = 127.961
+margin_top = -154.616
+margin_right = 327.961
+margin_bottom = -4.61591
+custom_fonts/font = SubResource( 2 )
+text = "112"
+script = ExtResource( 4 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button4" type="Button" parent="."]
+anchor_top = 1.0
+anchor_bottom = 1.0
+margin_left = 403.524
+margin_top = -154.364
+margin_right = 603.524
+margin_bottom = -4.36383
+custom_fonts/font = SubResource( 2 )
+text = "241"
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button2" type="Button" parent="."]
+anchor_top = 1.0
+anchor_bottom = 1.0
+margin_left = 662.64
+margin_top = -149.37
+margin_right = 862.64
+margin_bottom = 0.629944
+custom_fonts/font = SubResource( 2 )
+text = "242"
+script = ExtResource( 4 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="."]
+margin_left = 74.0825
+margin_top = 89.797
+margin_right = 968.083
+margin_bottom = 159.797
+custom_fonts/font = SubResource( 3 )
+text = "Solve This to find out the Co-Ordinates!"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[connection signal="pressed" from="Button" to="Button" method="_on_Button_pressed"]
+[connection signal="pressed" from="Button4" to="Button4" method="_on_Button4_pressed"]
+[connection signal="pressed" from="Button2" to="Button2" method="_on_Button2_pressed"]

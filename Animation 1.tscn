@@ -1,0 +1,740 @@
+[gd_scene load_steps=76 format=2]
+
+[ext_resource path="res://Assets/untitled.glb" type="PackedScene" id=1]
+[ext_resource path="res://Scenes/Door.glb" type="PackedScene" id=2]
+[ext_resource path="res://Rooms/GameRoom.glb" type="PackedScene" id=3]
+[ext_resource path="res://Assets/uploads_files_38753_Morning_Apartment.glb" type="PackedScene" id=4]
+[ext_resource path="res://Assets/uploads_files_3144064_Karthi.glb" type="PackedScene" id=5]
+[ext_resource path="res://house for competition school.glb" type="PackedScene" id=6]
+[ext_resource path="res://Fonts/ARLRDBD.TTF" type="DynamicFontData" id=7]
+[ext_resource path="res://Scenes/Continue button.gd" type="Script" id=8]
+[ext_resource path="res://Scenes/car.tscn" type="PackedScene" id=9]
+
+[sub_resource type="BoxShape" id=1]
+
+[sub_resource type="Animation" id=2]
+resource_name = "Human animation"
+length = 8.0
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:translation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 1, 3, 4, 5, 7, 8 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector3( 34.2044, 32.0659, -12.3043 ), Vector3( -36.4691, 32.0659, -12.3043 ), Vector3( -36.4691, 32.0659, 34.981 ), Vector3( -6.04671, 24.598, 58.0561 ), Vector3( 1.43804, 24.598, 57.2597 ), Vector3( 0.465714, 24.598, 54.8767 ), Vector3( -0.364105, 30.9222, 61.2233 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath(".:rotation_degrees")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 1, 2, 4.6, 5, 7, 7.5 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector3( 0, 178.773, 0 ), Vector3( 0, 97.991, 0 ), Vector3( 0, 178.773, 0 ), Vector3( 0, -40.252, 0 ), Vector3( 0, 0.642996, 0 ), Vector3( 0, -6.80759, 0 ), Vector3( 0, -170.182, 0 ) ]
+}
+
+[sub_resource type="BoxShape" id=3]
+margin = 4.013
+extents = Vector3( 9.5608, 0.3, 2.1038 )
+
+[sub_resource type="Animation" id=4]
+resource_name = "Dooranimation"
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:translation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector3( -18.6622, 45.1923, -10.5442 ), Vector3( -32.5684, 45.1923, 3.73141 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath(".:rotation_degrees")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector3( 0, 90.027, 0 ), Vector3( 0, 179.957, 0 ) ]
+}
+
+[sub_resource type="CubeMesh" id=5]
+size = Vector3( 71, 20, 1 )
+
+[sub_resource type="CubeMesh" id=6]
+size = Vector3( 129, 1, 2 )
+
+[sub_resource type="CubeMesh" id=7]
+size = Vector3( 125, 47, 1 )
+
+[sub_resource type="CubeMesh" id=8]
+size = Vector3( 153, 46, 1 )
+
+[sub_resource type="CubeMesh" id=9]
+size = Vector3( 170, 1, 155 )
+
+[sub_resource type="CubeMesh" id=10]
+size = Vector3( 40, 1, 70 )
+
+[sub_resource type="CubeMesh" id=11]
+size = Vector3( 168, 50, 0.5 )
+
+[sub_resource type="CubeMesh" id=12]
+size = Vector3( 1, 50, 55 )
+
+[sub_resource type="CubeMesh" id=13]
+size = Vector3( 170, 1, 65 )
+
+[sub_resource type="CubeMesh" id=14]
+size = Vector3( 70, 40, 0 )
+
+[sub_resource type="CubeMesh" id=15]
+size = Vector3( 1, 40, 75 )
+
+[sub_resource type="CubeMesh" id=16]
+size = Vector3( 103, 23, 1 )
+
+[sub_resource type="CubeMesh" id=17]
+size = Vector3( 1, 28, 55 )
+
+[sub_resource type="CubeMesh" id=18]
+size = Vector3( 103, 1, 55 )
+
+[sub_resource type="CubeMesh" id=19]
+size = Vector3( 76, 1, 60 )
+
+[sub_resource type="CubeMesh" id=20]
+size = Vector3( 76, 27, 1 )
+
+[sub_resource type="CubeMesh" id=21]
+size = Vector3( 1, 27, 60 )
+
+[sub_resource type="BoxShape" id=22]
+extents = Vector3( 0.3, 1, 38.801 )
+
+[sub_resource type="BoxShape" id=23]
+extents = Vector3( 0.3, 0.2, 39.3 )
+
+[sub_resource type="BoxShape" id=24]
+extents = Vector3( 1, 9.52172, 1 )
+
+[sub_resource type="BoxShape" id=25]
+
+[sub_resource type="BoxShape" id=26]
+extents = Vector3( 10, 41.0947, 1 )
+
+[sub_resource type="BoxShape" id=27]
+extents = Vector3( 10, 44.9882, 1 )
+
+[sub_resource type="BoxShape" id=28]
+extents = Vector3( 531.761, 1, 519.662 )
+
+[sub_resource type="BoxShape" id=29]
+extents = Vector3( 38.8526, 1, 79.3266 )
+
+[sub_resource type="BoxShape" id=30]
+extents = Vector3( 16.1081, 1, 14.6958 )
+
+[sub_resource type="BoxShape" id=31]
+extents = Vector3( 29.8781, 1, 27.8741 )
+
+[sub_resource type="BoxShape" id=32]
+extents = Vector3( 87.8486, 1, 31.7748 )
+
+[sub_resource type="BoxShape" id=33]
+extents = Vector3( 76.996, 1, 25.9758 )
+
+[sub_resource type="BoxShape" id=34]
+extents = Vector3( 15.1665, 1, 84.5049 )
+
+[sub_resource type="BoxShape" id=35]
+extents = Vector3( 16.6654, 1, 73.5999 )
+
+[sub_resource type="BoxShape" id=36]
+extents = Vector3( 14.5403, 1, 58.9907 )
+
+[sub_resource type="BoxShape" id=37]
+extents = Vector3( 62.2228, 19.5902, 2.79474 )
+
+[sub_resource type="BoxShape" id=38]
+extents = Vector3( 72.4663, 21.0929, 0.675599 )
+
+[sub_resource type="BoxShape" id=39]
+extents = Vector3( 31.7463, 13.3253, 1.45968 )
+
+[sub_resource type="BoxShape" id=40]
+extents = Vector3( 35.4835, 20, 2 )
+
+[sub_resource type="BoxShape" id=41]
+extents = Vector3( 25.0366, 18.2242, 1.27992 )
+
+[sub_resource type="BoxShape" id=42]
+extents = Vector3( 62.2905, 1, 5 )
+
+[sub_resource type="BoxShape" id=43]
+extents = Vector3( 20, 18.2265, 1.74627 )
+
+[sub_resource type="BoxShape" id=44]
+extents = Vector3( 13.0609, 20, 1.54371 )
+
+[sub_resource type="BoxShape" id=45]
+extents = Vector3( 25.5078, 0.001, 16.4663 )
+
+[sub_resource type="BoxShape" id=46]
+extents = Vector3( 5.9434, 19.3147, 36.9216 )
+
+[sub_resource type="BoxShape" id=47]
+extents = Vector3( 67.9007, 1.58121, 20 )
+
+[sub_resource type="ProceduralSky" id=48]
+
+[sub_resource type="Environment" id=49]
+background_mode = 2
+background_sky = SubResource( 48 )
+
+[sub_resource type="PhysicsMaterial" id=50]
+
+[sub_resource type="BoxShape" id=51]
+
+[sub_resource type="CubeMesh" id=52]
+size = Vector3( 1100, 1, 1100 )
+
+[sub_resource type="SpatialMaterial" id=53]
+albedo_color = Color( 0.34902, 0.631373, 0.360784, 1 )
+
+[sub_resource type="CubeMesh" id=54]
+size = Vector3( 2, 40, 2 )
+
+[sub_resource type="SpatialMaterial" id=55]
+albedo_color = Color( 0.137255, 0.0705882, 0.0666667, 1 )
+
+[sub_resource type="CubeMesh" id=56]
+size = Vector3( 20, 20, 20 )
+
+[sub_resource type="SpatialMaterial" id=57]
+albedo_color = Color( 0.0431373, 0.760784, 0.243137, 1 )
+
+[sub_resource type="MeshLibrary" id=58]
+
+[sub_resource type="BoxShape" id=59]
+
+[sub_resource type="CubeMesh" id=60]
+size = Vector3( 5, 0.02, 1.5 )
+
+[sub_resource type="BoxShape" id=61]
+
+[sub_resource type="CubeMesh" id=62]
+size = Vector3( 2000, 0.5, 100 )
+
+[sub_resource type="SpatialMaterial" id=63]
+albedo_color = Color( 0.341176, 0.333333, 0.333333, 1 )
+
+[sub_resource type="DynamicFont" id=64]
+size = 30
+font_data = ExtResource( 7 )
+
+[sub_resource type="Animation" id=65]
+resource_name = "Carescape animation"
+length = 7.0
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:translation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 5, 7 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector3( 86.3662, 9.81516, 99.0725 ), Vector3( 86.3662, 9.81516, 99.0725 ), Vector3( 4.97721, 9.81516, 99.0725 ) ]
+}
+
+[sub_resource type="CubeMesh" id=66]
+
+[node name="Spatial" type="Spatial"]
+
+[node name="Human" type="KinematicBody" parent="."]
+transform = Transform( -0.985354, 0, -0.170519, 0, 1, 0, 0.170519, 0, -0.985354, -0.364105, 30.9222, 61.2233 )
+collision_layer = 1048575
+collision_mask = 1048575
+collision/safe_margin = 7.015
+
+[node name="CollisionShape" type="CollisionShape" parent="Human"]
+transform = Transform( 1, 0, 1.49012e-08, 0, 1, 0, -1.49012e-08, 0, 1, -1.34971, 0, -4.29529 )
+shape = SubResource( 1 )
+
+[node name="Sprite3D" type="Sprite3D" parent="Human"]
+
+[node name="uploads_files_3144064_Karthi" parent="Human/Sprite3D" instance=ExtResource( 5 )]
+transform = Transform( 10.9713, 0, -0.793558, 0, 11, 0, 0.793558, 0, 10.9713, 0.870314, -15.2702, -5.05833 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Human"]
+autoplay = "Human animation"
+"anims/Human animation" = SubResource( 2 )
+
+[node name="Spatial" type="Spatial" parent="Human"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2.64681, 3.36208, -8.92747 )
+
+[node name="House" type="KinematicBody" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -9.99522, 0 )
+collision_layer = 1048575
+collision_mask = 1048575
+
+[node name="CollisionShape" type="CollisionShape" parent="House"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 269.911, 19.7081, 56.6355 )
+shape = SubResource( 3 )
+
+[node name="Sprite3D" type="Sprite3D" parent="House"]
+
+[node name="house for competition school" parent="House/Sprite3D" instance=ExtResource( 6 )]
+transform = Transform( 40, 0, 0, 0, 40, 0, 0, 0, 40, -1.6449, 58.5987, 3.03864 )
+
+[node name="Door7" parent="House/Sprite3D" instance=ExtResource( 2 )]
+transform = Transform( -0.0377118, 0, 20, 0, 55, 0, -80, 0, -0.00942795, -18.6653, 45.1923, -11.2664 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="House/Sprite3D/Door7"]
+autoplay = "Dooranimation"
+anims/Dooranimation = SubResource( 4 )
+
+[node name="MeshInstance" type="MeshInstance" parent="House"]
+transform = Transform( 3.01192, 0, 0, 0, 1.98444, 0, 0, 0, 0.182617, 150.326, 39.374, 125.558 )
+mesh = SubResource( 5 )
+material/0 = null
+
+[node name="MeshInstance2" type="MeshInstance" parent="House"]
+transform = Transform( 1.65427, 0, 0, 0, 1, 0, 0, 0, 42.428, 150.844, 15.2496, 83.599 )
+mesh = SubResource( 6 )
+material/0 = null
+
+[node name="MeshInstance3" type="MeshInstance" parent="House"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 323.628, 40.8248, 123.207 )
+mesh = SubResource( 7 )
+material/0 = null
+
+[node name="MeshInstance4" type="MeshInstance" parent="House"]
+transform = Transform( -1, 0, -0.000767902, 0, 1, 0, 0.000767902, 0, -1, 321.882, 40.8248, -27.8688 )
+mesh = SubResource( 7 )
+material/0 = null
+
+[node name="MeshInstance5" type="MeshInstance" parent="House"]
+transform = Transform( -3.48528e-05, 0, 1, 0, 1, 0, -1, 0, -3.48528e-05, 386.522, 42.2327, 46.8907 )
+mesh = SubResource( 8 )
+material/0 = null
+
+[node name="MeshInstance6" type="MeshInstance" parent="House"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 298.643, 18.1687, 46.6119 )
+mesh = SubResource( 9 )
+material/0 = null
+
+[node name="MeshInstance7" type="MeshInstance" parent="House"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 118.788, 18.1687, -16.5959 )
+mesh = SubResource( 9 )
+material/0 = null
+
+[node name="MeshInstance8" type="MeshInstance" parent="House"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 223.39, 19.0761, 5.20439 )
+mesh = SubResource( 10 )
+material/0 = null
+
+[node name="MeshInstance9" type="MeshInstance" parent="House"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 119.263, 43.3641, -113.903 )
+mesh = SubResource( 11 )
+material/0 = null
+
+[node name="MeshInstance10" type="MeshInstance" parent="House"]
+
+[node name="MeshInstance11" type="MeshInstance" parent="House"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 205.955, 43.2313, -66.0893 )
+mesh = SubResource( 12 )
+material/0 = null
+
+[node name="MeshInstance12" type="MeshInstance" parent="House"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 121.019, 69.1101, -60.9769 )
+mesh = SubResource( 13 )
+material/0 = null
+
+[node name="MeshInstance13" type="MeshInstance" parent="House"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 36.2679, 43.2313, -66.0893 )
+mesh = SubResource( 12 )
+material/0 = null
+
+[node name="MeshInstance14" type="MeshInstance" parent="House"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 123.887, 43.3641, -27.6663 )
+mesh = SubResource( 11 )
+material/0 = null
+
+[node name="MeshInstance15" type="MeshInstance" parent="House"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 143.724, 37.3576, 44.3599 )
+mesh = SubResource( 14 )
+material/0 = null
+
+[node name="MeshInstance16" type="MeshInstance" parent="House"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 258.309, 40.2231, 80.3121 )
+mesh = SubResource( 15 )
+material/0 = null
+
+[node name="MeshInstance17" type="MeshInstance" parent="House"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 173.562, 65.1916, 46.6119 )
+mesh = SubResource( 9 )
+material/0 = null
+
+[node name="MeshInstance18" type="MeshInstance" parent="House"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 152.524, 85.7059, 69.4876 )
+mesh = SubResource( 16 )
+material/0 = null
+
+[node name="MeshInstance19" type="MeshInstance" parent="House"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 152.524, 85.7059, 14.1428 )
+mesh = SubResource( 16 )
+material/0 = null
+
+[node name="MeshInstance20" type="MeshInstance" parent="House"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 100.321, 83.2495, 42.1007 )
+mesh = SubResource( 17 )
+material/0 = null
+
+[node name="MeshInstance21" type="MeshInstance" parent="House"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 203.52, 83.1187, 42.1007 )
+mesh = SubResource( 17 )
+material/0 = null
+
+[node name="MeshInstance22" type="MeshInstance" parent="House"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 151.921, 97.0455, 43.1585 )
+mesh = SubResource( 18 )
+material/0 = null
+
+[node name="MeshInstance23" type="MeshInstance" parent="House"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 164.483, 96.7793, 100.912 )
+mesh = SubResource( 19 )
+material/0 = null
+
+[node name="MeshInstance24" type="MeshInstance" parent="House"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 164.532, 84.0113, 130.789 )
+mesh = SubResource( 20 )
+material/0 = null
+
+[node name="MeshInstance25" type="MeshInstance" parent="House"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 126.845, 83.4482, 100.509 )
+mesh = SubResource( 21 )
+material/0 = null
+
+[node name="MeshInstance26" type="MeshInstance" parent="House"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 202.998, 83.4482, 100.509 )
+mesh = SubResource( 21 )
+material/0 = null
+
+[node name="CollisionShape17" type="CollisionShape" parent="House"]
+transform = Transform( 1, 0, 0, 0, 0.839013, 0.544112, 0, -0.544112, 0.839013, 300.323, 39.4969, 58.8085 )
+shape = SubResource( 22 )
+
+[node name="CollisionShape18" type="CollisionShape" parent="House"]
+transform = Transform( 1, 0, 0, 0, 0.835338, 0.549737, 0, -0.549737, 0.835338, 299.773, 53.8518, 55.8461 )
+shape = SubResource( 23 )
+
+[node name="CollisionShape19" type="CollisionShape" parent="House"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 299.92, 24.8178, 22.6524 )
+shape = SubResource( 24 )
+
+[node name="Bedroom" type="KinematicBody" parent="House"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 114.883, 69.515, 0 )
+
+[node name="CollisionShape" type="CollisionShape" parent="House/Bedroom"]
+shape = SubResource( 25 )
+
+[node name="Sprite3D" type="Sprite3D" parent="House/Bedroom"]
+
+[node name="untitled" parent="House/Bedroom/Sprite3D" instance=ExtResource( 1 )]
+transform = Transform( 0.71, 0, 0, 0, 0.3, 0, 0, 0, 0.37, 46.9675, 10.0077, 52.366 )
+
+[node name="CollisionShape20" type="CollisionShape" parent="House"]
+transform = Transform( 1, 0, 0, 0, 0.556919, -0.830567, 0, 0.830567, 0.556919, 290.028, 42.8712, 60.4649 )
+shape = SubResource( 26 )
+
+[node name="CollisionShape22" type="CollisionShape" parent="House"]
+transform = Transform( 1, 0, 0, 0, -0.0195465, 0.999809, 0, -0.999809, -0.0195465, 270.895, 90.6965, 89.0454 )
+shape = SubResource( 27 )
+
+[node name="CollisionShape21" type="CollisionShape" parent="House"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 115.542, 24.9578, 10.9631 )
+shape = SubResource( 28 )
+
+[node name="CollisionShape23" type="CollisionShape" parent="House"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 345.917, 63.9835, 48.4044 )
+shape = SubResource( 29 )
+
+[node name="CollisionShape24" type="CollisionShape" parent="House"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 154.013, 71.3608, 51.4993 )
+shape = SubResource( 29 )
+
+[node name="CollisionShape26" type="CollisionShape" parent="House"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 13.6828, 70.4035, 27.08 )
+shape = SubResource( 30 )
+
+[node name="CollisionShape27" type="CollisionShape" parent="House"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2.48581, 70.613, -14.4818 )
+shape = SubResource( 31 )
+
+[node name="CollisionShape28" type="CollisionShape" parent="House"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 120.502, 68.6713, -61.2157 )
+shape = SubResource( 32 )
+
+[node name="CollisionShape29" type="CollisionShape" parent="House"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 297.849, 68.6713, -0.525192 )
+shape = SubResource( 32 )
+
+[node name="CollisionShape30" type="CollisionShape" parent="House"]
+transform = Transform( -0.0349693, 0, -0.999388, 0, 1, 0, 0.999388, 0, -0.0349693, 231.634, 65.1298, 46.2388 )
+shape = SubResource( 33 )
+
+[node name="CollisionShape31" type="CollisionShape" parent="House"]
+transform = Transform( 0.961516, 0.274748, 0, -0.274748, 0.961516, 0, 0, 0, 1, 213.736, 68.4982, 38.7773 )
+shape = SubResource( 34 )
+
+[node name="CollisionShape25" type="CollisionShape" parent="House"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 50.708, 77.6366, 55.3059 )
+shape = SubResource( 35 )
+
+[node name="CollisionShape32" type="CollisionShape" parent="House"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 84.7422, 76.9815, 74.753 )
+shape = SubResource( 36 )
+
+[node name="CollisionShape33" type="CollisionShape" parent="House"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 98.4596, 39.3014, -26.2922 )
+shape = SubResource( 37 )
+
+[node name="CollisionShape34" type="CollisionShape" parent="House"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 250.932, 39.3014, -29.6829 )
+shape = SubResource( 37 )
+
+[node name="CollisionShape35" type="CollisionShape" parent="House"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 322.771, 39.3014, -28.878 )
+shape = SubResource( 37 )
+
+[node name="CollisionShape36" type="CollisionShape" parent="House"]
+transform = Transform( -0.0143112, 0, -0.999898, 0, 1, 0, 0.999898, 0, -0.0143112, 384.906, 44.757, 51.1751 )
+shape = SubResource( 38 )
+
+[node name="CollisionShape37" type="CollisionShape" parent="House"]
+transform = Transform( -0.999769, 0, -0.0214834, 0, 1, 0, 0.0214834, 0, -0.999769, 310.972, 39.4506, 122.141 )
+shape = SubResource( 38 )
+
+[node name="CollisionShape38" type="CollisionShape" parent="House"]
+transform = Transform( -0.999769, 0, -0.0214834, 0, 1, 0, 0.0214834, 0, -0.999769, 192.787, 39.4506, 119.63 )
+shape = SubResource( 38 )
+
+[node name="CollisionShape39" type="CollisionShape" parent="House"]
+transform = Transform( -0.999769, 0, -0.0214834, 0, 1, 0, 0.0214834, 0, -0.999769, 115.62, 39.4506, 123.99 )
+shape = SubResource( 38 )
+
+[node name="CollisionShape40" type="CollisionShape" parent="House"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 47.6274, 43.8336, 11.6332 )
+shape = SubResource( 39 )
+
+[node name="CollisionShape41" type="CollisionShape" parent="House"]
+transform = Transform( 0.999908, 0, -0.0264486, 0, 1, 0, 0.0135608, 0, 1.95019, 120.986, 37.7247, 42.6631 )
+shape = SubResource( 40 )
+
+[node name="CollisionShape42" type="CollisionShape" parent="House"]
+transform = Transform( 3.23255, 0, 0, 0, 1.33936, 0, 0, 0, 1, 114.585, 41.2352, -113.114 )
+shape = SubResource( 41 )
+
+[node name="CollisionShape43" type="CollisionShape" parent="House"]
+transform = Transform( 1, 0, 0, 0, 0.813446, 0.58164, 0, -0.58164, 0.813446, 140.106, 70.2888, 13.3373 )
+shape = SubResource( 42 )
+
+[node name="CollisionShape2" type="CollisionShape" parent="House"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 196.596, 39.183, 43.7196 )
+shape = SubResource( 43 )
+
+[node name="CollisionShape3" type="CollisionShape" parent="House"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 246.428, 40.0905, 41.8265 )
+shape = SubResource( 44 )
+
+[node name="CollisionShape4" type="CollisionShape" parent="House"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 280.428, 68.2508, 109.559 )
+shape = SubResource( 45 )
+
+[node name="MeshInstance27" type="MeshInstance" parent="House"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 223.085, 37.3576, 44.0143 )
+mesh = SubResource( 14 )
+material/0 = null
+
+[node name="MeshInstance28" type="MeshInstance" parent="House"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 116.469, 37.3576, 43.8684 )
+mesh = SubResource( 14 )
+material/0 = null
+
+[node name="CollisionShape5" type="CollisionShape" parent="House"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 204.983, 35.7036, 82.2974 )
+shape = SubResource( 46 )
+
+[node name="Door" parent="House" instance=ExtResource( 2 )]
+transform = Transform( 30, 0, 0, 0, 30, 0, 0, 0, 30, 155.224, 84.7184, 67.9076 )
+
+[node name="Door2" parent="House" instance=ExtResource( 2 )]
+transform = Transform( 30, 0, 0, 0, 30, 0, 0, 0, 30, 155.224, 84.7184, 72.9466 )
+
+[node name="Door3" parent="House" instance=ExtResource( 2 )]
+transform = Transform( 30, 0, 0, 0, 30, 0, 0, 0, 30, 155.224, 84.7184, 16.2898 )
+
+[node name="Door4" parent="House" instance=ExtResource( 2 )]
+transform = Transform( 30, 0, 0, 0, 30, 0, 0, 0, 30, 155.224, 84.7184, 13.6187 )
+
+[node name="Door5" parent="House" instance=ExtResource( 2 )]
+transform = Transform( 30, 0, 0, 0, 30, 0, 0, 0, 30, 75.3892, 81.5934, -26.9662 )
+
+[node name="Door6" parent="House" instance=ExtResource( 2 )]
+transform = Transform( 30, 0, 0, 0, 30, 0, 0, 0, 30, 75.3892, 81.5934, -29.4711 )
+
+[node name="CollisionShape6" type="CollisionShape" parent="House"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 134.988, 69.8614, -3.9607 )
+shape = SubResource( 47 )
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource( 49 )
+
+[node name="RigidBody" type="RigidBody" parent="."]
+collision_layer = 1048575
+collision_mask = 1048575
+mass = 0.00102041
+physics_material_override = SubResource( 50 )
+gravity_scale = 0.0
+can_sleep = false
+
+[node name="CollisionShape" type="CollisionShape" parent="RigidBody"]
+shape = SubResource( 51 )
+
+[node name="MeshInstance" type="MeshInstance" parent="RigidBody"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 118.681, 0, 0 )
+mesh = SubResource( 52 )
+material/0 = SubResource( 53 )
+
+[node name="log1" type="MeshInstance" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -83.3744, 20.6315, -120.721 )
+mesh = SubResource( 54 )
+material/0 = SubResource( 55 )
+
+[node name="Tree1" type="MeshInstance" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -81.8633, 45.1482, -122.057 )
+mesh = SubResource( 56 )
+material/0 = SubResource( 57 )
+
+[node name="DirectionalLight" type="DirectionalLight" parent="."]
+transform = Transform( -0.999534, 0.0285677, 0.0107333, 0.0303115, 0.970153, 0.240593, -0.00353973, 0.240806, -0.970567, 130.785, 392.351, -517.786 )
+
+[node name="GridMap" type="GridMap" parent="."]
+transform = Transform( -1.05678e+11, 0, 0, 0, 1, 0, 0, 0, -76.854, 0, -6.73167, 0 )
+mesh_library = SubResource( 58 )
+data = {
+"cells": PoolIntArray(  )
+}
+__meta__ = {
+"_editor_clip_": 0
+}
+
+[node name="Game room" type="KinematicBody" parent="."]
+transform = Transform( -0.00354305, 0, 0.999994, 0, 1, 0, -0.999994, 0, -0.00354305, 139.719, 83.9842, 79.2173 )
+
+[node name="CollisionShape" type="CollisionShape" parent="Game room"]
+shape = SubResource( 59 )
+
+[node name="Sprite3D" type="Sprite3D" parent="Game room"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 72.2305 )
+
+[node name="GameRoom" parent="Game room/Sprite3D" instance=ExtResource( 3 )]
+transform = Transform( -4.98882, 0, -0.467819, 0, 3, 0, 0.334156, 0, -6.98435, -23.85, -17.5221, -51.9781 )
+
+[node name="Kitchen" type="KinematicBody" parent="."]
+transform = Transform( 0.00760953, 0, 0.999971, 0, 1, 0, -0.999971, 0, 0.00760953, 87.1713, 24.3254, -54.2397 )
+
+[node name="CollisionShape" type="CollisionShape" parent="Kitchen"]
+shape = SubResource( 59 )
+
+[node name="Sprite3D" type="Sprite3D" parent="Kitchen"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 72.2305 )
+
+[node name="uploads_files_38753_Morning_Apartment" parent="Kitchen/Sprite3D" instance=ExtResource( 4 )]
+transform = Transform( 12, 0, 1.49012e-08, 0, 12, 0, -3.72529e-08, 0, 20, 7.52423, -15.3024, -14.8057 )
+
+[node name="MeshInstance" type="MeshInstance" parent="."]
+transform = Transform( 1, 0, 0, 0, -0.0478821, 0, 0, 0, 1, 27.6437, 28.4607, 252.676 )
+mesh = SubResource( 60 )
+material/0 = null
+
+[node name="Road" type="RigidBody" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -439.964, 0, 106.992 )
+mass = 0.00102041
+gravity_scale = 0.0
+
+[node name="CollisionShape" type="CollisionShape" parent="Road"]
+shape = SubResource( 61 )
+
+[node name="MeshInstance" type="MeshInstance" parent="Road"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -990.742, 0.235483, 0 )
+mesh = SubResource( 62 )
+material/0 = SubResource( 63 )
+
+[node name="log2" type="MeshInstance" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -83.3744, 20.6315, 150.571 )
+mesh = SubResource( 54 )
+material/0 = SubResource( 55 )
+
+[node name="Tree2" type="MeshInstance" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -81.8633, 45.1482, 150.338 )
+mesh = SubResource( 56 )
+material/0 = SubResource( 57 )
+
+[node name="InterpolatedCamera" type="InterpolatedCamera" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -46.9897, 35.7075, -6.19094 )
+current = true
+near = 0.01
+far = 8192.0
+target = NodePath("../Human/Spatial")
+speed = 20.0
+enabled = true
+
+[node name="Control" type="Control" parent="."]
+margin_right = 888.0
+margin_bottom = 446.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button" type="Button" parent="Control"]
+margin_left = 710.0
+margin_top = 371.0
+margin_right = 867.0
+margin_bottom = 439.0
+custom_fonts/font = SubResource( 64 )
+text = "Continue"
+script = ExtResource( 8 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="car" parent="." instance=ExtResource( 9 )]
+transform = Transform( 4.69163, -2.19661, -39.6631, 0.258031, 39.9397, -2.1814, 39.7231, 0, 4.69872, 4.97721, 9.81516, 99.0725 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="car"]
+autoplay = "Carescape animation"
+"anims/Carescape animation" = SubResource( 65 )
+
+[node name="MeshInstance2" type="MeshInstance" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2.17197, 27.2013, 43.3348 )
+mesh = SubResource( 66 )
+material/0 = null
+
+[connection signal="pressed" from="Control/Button" to="Control/Button" method="_on_Button_pressed"]

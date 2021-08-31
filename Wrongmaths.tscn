@@ -1,0 +1,48 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://Fonts/Dodgy Ultra.ttf" type="DynamicFontData" id=1]
+[ext_resource path="res://Fonts/ARLRDBD.TTF" type="DynamicFontData" id=2]
+[ext_resource path="res://wrong1 maths.gd" type="Script" id=3]
+
+[sub_resource type="DynamicFont" id=1]
+size = 35
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 30
+font_data = ExtResource( 2 )
+
+[node name="Control" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+rect_pivot_offset = Vector2( -444.93, 132.177 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ColorRect" type="ColorRect" parent="."]
+margin_right = 1023.0
+margin_bottom = 593.0
+color = Color( 0.929412, 0.105882, 0.105882, 1 )
+
+[node name="Label" type="Label" parent="."]
+margin_left = 25.4271
+margin_top = 214.012
+margin_right = 970.427
+margin_bottom = 361.012
+rect_rotation = -10.4
+custom_fonts/font = SubResource( 1 )
+text = "Whooops!, Wrong Answer!"
+align = 1
+valign = 1
+
+[node name="Button" type="Button" parent="."]
+margin_left = 381.407
+margin_top = 330.552
+margin_right = 558.407
+margin_bottom = 392.552
+custom_fonts/font = SubResource( 2 )
+text = "Retry"
+script = ExtResource( 3 )
+
+[connection signal="pressed" from="Button" to="Button" method="_on_Button_pressed"]

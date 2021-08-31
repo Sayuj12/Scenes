@@ -1,0 +1,90 @@
+[gd_scene load_steps=10 format=2]
+
+[ext_resource path="res://ScienceQuestionsForGodot-main/CorrectAnswer6thScreen.gd" type="Script" id=1]
+[ext_resource path="res://Fonts/ARLRDBD.TTF" type="DynamicFontData" id=2]
+[ext_resource path="res://ScienceQuestionsForGodot-main/FRABK.TTF" type="DynamicFontData" id=3]
+[ext_resource path="res://Scenes/Button.gd" type="Script" id=4]
+[ext_resource path="res://Scenes/Button2.gd" type="Script" id=5]
+
+[sub_resource type="DynamicFont" id=1]
+size = 35
+font_data = ExtResource( 3 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 45
+font_data = ExtResource( 3 )
+
+[sub_resource type="DynamicFont" id=3]
+size = 35
+font_data = ExtResource( 3 )
+
+[sub_resource type="DynamicFont" id=4]
+size = 60
+font_data = ExtResource( 2 )
+
+[node name="Control" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button" type="Button" parent="."]
+anchor_top = 1.0
+anchor_bottom = 1.0
+margin_top = -100.0
+margin_right = 251.0
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color_pressed = Color( 0.839216, 0.0705882, 0.0705882, 1 )
+text = "Hurricane"
+script = ExtResource( 4 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button2" type="Button" parent="."]
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+margin_left = -135.0
+margin_top = -100.0
+margin_right = 135.0
+custom_fonts/font = SubResource( 2 )
+custom_colors/font_color_pressed = Color( 0.894118, 0.0588235, 0.0588235, 1 )
+text = "Cyclone"
+script = ExtResource( 5 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button3" type="Button" parent="."]
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -233.0
+margin_top = -100.0
+custom_fonts/font = SubResource( 3 )
+text = "Typhoon"
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+anchor_right = 1.0
+margin_left = 21.182
+margin_top = 225.382
+margin_right = 42.182
+margin_bottom = 372.382
+custom_fonts/normal_font = SubResource( 4 )
+text = "In Phillippines and Japan, cyclone is called as "
+__meta__ = {
+"_edit_use_anchors_": false,
+"_editor_description_": ""
+}
+
+[connection signal="pressed" from="Button" to="Button" method="_on_Button_pressed"]
+[connection signal="pressed" from="Button2" to="Button2" method="_on_Button2_pressed"]
+[connection signal="pressed" from="Button3" to="Button3" method="_on_Button3_pressed"]
